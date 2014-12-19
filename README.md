@@ -17,6 +17,13 @@ In your project composer.json, add the following
 ```
 json
 {
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "url-to-composer-proxy"
+		}
+	],
+	...
 	"require": {
 		"tomzx/composer-proxy-client": "0.1.*@dev"
 	},
@@ -28,7 +35,7 @@ json
 		"pre-update-cmd": [
 			"ComposerProxy\\Client\\Client::prepare"
 		]
-	}
+	},
 	"extra": {
 		"composer-proxy": {
 			"url": "url-to-composer-proxy"
