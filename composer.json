@@ -1,0 +1,40 @@
+{
+	"name": "tomzx/composer-proxy-client",
+	"description": "Composer proxy client to cache external packages sources",
+	"type": "library",
+	"keywords": [
+		"composer",
+		"proxy",
+		"client"
+	],
+	"homepage": "https://github.com/tomzx/composer-proxy-client",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Tom Rochette",
+			"email": "tom@tomrochette.com",
+			"homepage": "http://www.tomrochette.com"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/tomzx/composer-proxy-client/issues"
+	},
+	"require": {
+		"php": ">=5.4.0",
+		"guzzlehttp/guzzle": "~5",
+		"tomzx/arry": "0.1.*@dev"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4"
+	},
+	"autoload": {
+		"psr-4": {
+			"ComposerProxy\\Client\\": "src/ComposerProxy/Client"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.1-dev"
+		}
+	}
+}
