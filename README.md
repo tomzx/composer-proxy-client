@@ -12,6 +12,13 @@ Composer Proxy Client
 Getting started
 ---------------
 
+First, start by requiring the `Composer Proxy Client` in your project.
+
+```
+bash
+php composer.phar require tomzx/composer-proxy-client 0.1.*@dev
+```
+
 In your project composer.json, add the following
 
 ```
@@ -24,10 +31,6 @@ json
 		}
 	],
 	...
-	"require": {
-		"tomzx/composer-proxy-client": "0.1.*@dev"
-	},
-	...
 	"scripts": {
 		"pre-install-cmd": [
 			"ComposerProxy\\Client\\Client::prepare"
@@ -38,7 +41,9 @@ json
 	},
 	"extra": {
 		"composer-proxy": {
-			"url": "url-to-composer-proxy"
+			"url": [
+				"url-to-composer-proxy"
+			]
 		}
 	}
 }
